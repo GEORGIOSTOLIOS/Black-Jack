@@ -79,7 +79,11 @@ def the_winner(computer_score, player_score):
 
 
 def print_winner(a_winner, winner_score):
-    print(f"{a_winner} is the winner with score {winner_score}")
+    # if the player has lost so the computer did not need to play
+    if winner_score == 0:
+        print(f"{a_winner} won without playing")
+    else:
+        print(f"{a_winner} is the winner with score {winner_score}")
 
 
 def computer_move(a_computer_score, a_player_score):
