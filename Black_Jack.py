@@ -93,12 +93,11 @@ def computer_move(a_computer_score, a_player_score):
         if computer_won(a_computer_score, a_player_score):
             break
         elif a_computer_score < a_player_score:
-            print("Would you like to draw again? Yes/No:")
-            print("yes")
+            print("Would you like to draw again? Yes/No:yes")
             a_computer_score = computer_draw_card(a_computer_score)
-        if player_lost(a_computer_score):
-            print(f"Computer has score {a_computer_score} so he has lost. ")
-            break
+            if player_lost(a_computer_score):
+                print(f"Computer has score {a_computer_score} so he has lost. ")
+                break
 
     return a_computer_score
 
